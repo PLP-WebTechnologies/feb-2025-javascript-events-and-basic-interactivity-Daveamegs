@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive JavaScript Playground</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1 id="main-heading">Interactive JavaScript Playground</h1>
+        <p id="secret-message" class="hidden">You found the secret message!</p>
+    </header>
+
+    <main>
+        <!-- Event Handling Section -->
+        <section class="panel">
+            <h2>Event Handling</h2>
+
+            <div class="event-box" id="click-box">
+                <p>Click me!</p>
+            </div>
+
+            <div class="event-box" id="hover-box">
+                <p>Hover over me!</p>
+            </div>
+
+            <div class="event-box" id="keypress-box">
+                <p>Press any key (focus me first)</p>
+            </div>
+
+            <div class="event-box" id="secret-box">
+                <p>Double-click or long press me!</p>
+            </div>
+        </section>
+
+        <!-- Interactive Elements Section -->
+        <section class="panel">
+            <h2>Interactive Elements 🎮</h2>
+
+            <div class="color-changer">
+                <button id="color-button">Change My Color</button>
+                <div id="color-display"></div>
+            </div>
+
+            <div class="gallery">
+                <h3>Image Gallery</h3>
+                <div class="gallery-container">
+                    <img src="https://picsum.photos/id/237/300/200" alt="Gallery image" class="active">
+                    <img src="https://picsum.photos/id/238/300/200" alt="Gallery image">
+                    <img src="https://picsum.photos/id/239/300/200" alt="Gallery image">
+                </div>
+                <button id="prev-btn">Previous</button>
+                <button id="next-btn">Next</button>
+            </div>
+
+            <div class="tabs">
+                <div class="tab-buttons">
+                    <button class="tab-btn active" data-tab="tab1">Tab 1</button>
+                    <button class="tab-btn" data-tab="tab2">Tab 2</button>
+                    <button class="tab-btn" data-tab="tab3">Tab 3</button>
+                </div>
+                <div class="tab-content active" id="tab1">
+                    <p>Content for Tab 1</p>
+                </div>
+                <div class="tab-content" id="tab2">
+                    <p>Content for Tab 2</p>
+                </div>
+                <div class="tab-content" id="tab3">
+                    <p>Content for Tab 3</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Form Validation Section -->
+        <section class="panel">
+            <h2>Form Validation</h2>
+            <form id="user-form">
+                <div class="form-group">
+                    <label for="name">Name (required):</label>
+                    <input type="text" id="name" required>
+                    <span class="error-message"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email">
+                    <span class="error-message"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password (min 8 chars):</label>
+                    <input type="password" id="password">
+                    <span class="error-message"></span>
+                    <div class="password-rules">
+                        <p class="rule" data-rule="length">At least 8 characters</p>
+                        <p class="rule" data-rule="number">Contains a number</p>
+                        <p class="rule" data-rule="special">Contains a special character</p>
+                    </div>
+                </div>
+
+                <button type="submit">Submit</button>
+            </form>
+            <div id="form-success" class="hidden">
+                <p>Form submitted successfully!</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Interactive JavaScript Playground</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
